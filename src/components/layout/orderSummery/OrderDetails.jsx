@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom'; // For navigation after saving
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-
+import { MdArrowBack } from 'react-icons/md'; // Import backward arrow icon from react-icons
 
 const OrderDetails = () => {
   const navigate = useNavigate(); // Access the navigate function
@@ -40,6 +40,15 @@ const OrderDetails = () => {
 
   return (
     <div className="container mt-5">
+      {/* Backward Icon */}
+      <button 
+        className="btn btn-link position-absolute top-0 start-0 ms-3 mt-3"
+        onClick={() => navigate(-1)} // Go back to the previous page
+        style={{ fontSize: '1.5rem', color: '#007bff', padding: '0.25rem 0.5rem' }} // Reduced padding for smaller button
+      >
+        <MdArrowBack />
+      </button>
+
       <h2 className="text-center mb-4">Add delivery address</h2>
       
       {/* Formik Form */}
@@ -111,7 +120,7 @@ const OrderDetails = () => {
           </div>
 
           {/* Save Button */}
-          <button type="submit" className="btn btn-success w-100">Save Address</button>
+          <button  type="submit" className="btn btn-success  w-20">Save Address</button>
         </Form>
       </Formik>
     </div>

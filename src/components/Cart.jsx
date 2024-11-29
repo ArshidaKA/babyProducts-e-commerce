@@ -61,6 +61,7 @@ function Cart() {
 
       {/* Total Price Section */}
       <div className="total-price-section sticky-bottom order">
+        
         <div className="d-flex justify-content-between align-items-center">
           <h3 className="total-price"><span>Total Price:</span> ₹{totalPrice.toFixed(2)}</h3>
           {/* Order Now Button */}

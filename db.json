@@ -6,21 +6,30 @@
       "password": "safashifa",
       "cart": [
         {
-          "id": "3",
-          "name": "Baby High Chair",
-          "category": "Feeding",
-          "description": "Adjustable high chair with a detachable tray.",
-          "price": 2499,
-          "image_url": "https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:490,w:490)/data/mothercare/18-nov-2022/492863026_1.jpg",
-          "quantity": 1
-        },
-        {
           "id": "2",
           "name": "Baby Bib Set",
           "category": "Clothing",
           "description": "Set of 5 baby bibs made of soft fabric.",
           "price": 399,
           "image_url": "https://media-uk.landmarkshops.in/cdn-cgi/image/h=1125,w=1125,q=85,fit=cover/lifestyle/1000011659588-Mult-Multicolour-1000011659588_02-2100.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "5",
+          "name": "Baby Swaddle Blanket",
+          "category": "Clothing",
+          "description": "Soft cotton swaddle blanket for newborns.",
+          "price": 499,
+          "image_url": "https://crane-baby.com/wp-content/uploads/2024/08/BC-100SWS-2_1_HERO.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "8",
+          "name": "Baby Walker",
+          "category": "Toys",
+          "description": "Colorful baby walker with music and lights.",
+          "price": 1999,
+          "image_url": "https://m.media-amazon.com/images/I/61GbrdHpq-L.jpg",
           "quantity": 1
         }
       ],
@@ -66,6 +75,75 @@
             }
           ],
           "totalAmount": 1299
+        },
+        {
+          "cartitems": [
+            {
+              "id": "3",
+              "name": "Baby High Chair",
+              "category": "Feeding",
+              "description": "Adjustable high chair with a detachable tray.",
+              "price": 2499,
+              "image_url": "https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:490,w:490)/data/mothercare/18-nov-2022/492863026_1.jpg",
+              "quantity": 1
+            },
+            {
+              "id": "2",
+              "name": "Baby Bib Set",
+              "category": "Clothing",
+              "description": "Set of 5 baby bibs made of soft fabric.",
+              "price": 399,
+              "image_url": "https://media-uk.landmarkshops.in/cdn-cgi/image/h=1125,w=1125,q=85,fit=cover/lifestyle/1000011659588-Mult-Multicolour-1000011659588_02-2100.jpg",
+              "quantity": 1
+            }
+          ],
+          "totalAmount": 2898
+        },
+        {
+          "cartitems": [
+            {
+              "id": "11",
+              "name": "Baby Carrier",
+              "category": "Safety",
+              "description": "Ergonomic baby carrier for hands-free carrying.",
+              "price": 2499,
+              "image_url": "https://i5.walmartimages.com/seo/AGUDAN-Baby-Carrier-with-Hip-Seat-Versatile-9-in-1-Unisex-Infant-Carrier-for-All-Seasons_977beb8e-10d6-4224-8d15-ec500313ac02.c4643428185395d3cf95de6114092897.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+              "quantity": 1
+            },
+            {
+              "id": "1",
+              "name": "Baby Bottle Set",
+              "category": "Feeding",
+              "description": "Set of 4 BPA-free baby bottles.",
+              "price": 699,
+              "image_url": "https://media.very.co.uk/i/very/UJPQP_SQ2_0000000047_GREEN_SLf?$pdp_300x400_x2$&fmt=jpg",
+              "quantity": 3
+            },
+            {
+              "id": "2",
+              "name": "Baby Bib Set",
+              "category": "Clothing",
+              "description": "Set of 5 baby bibs made of soft fabric.",
+              "price": 399,
+              "image_url": "https://media-uk.landmarkshops.in/cdn-cgi/image/h=1125,w=1125,q=85,fit=cover/lifestyle/1000011659588-Mult-Multicolour-1000011659588_02-2100.jpg",
+              "quantity": 1
+            }
+          ],
+          "totalAmount": 4995
+        },
+        {
+          "cartitems": [
+            {
+              "id": "2",
+              "name": "Baby Bib Set",
+              "category": "Clothing",
+              "description": "Set of 5 baby bibs made of soft fabric.",
+              "price": 399,
+              "image_url": "https://media-uk.landmarkshops.in/cdn-cgi/image/h=1125,w=1125,q=85,fit=cover/lifestyle/1000011659588-Mult-Multicolour-1000011659588_02-2100.jpg",
+              "quantity": 1
+            }
+          ],
+          "totalAmount": 399
         }
       ]
     },
@@ -74,7 +152,26 @@
       "username": "salih",
       "email": "salih@gmail.com",
       "password": "12345678",
-      "cart": [],
+      "cart": [
+        {
+          "id": "4",
+          "name": "Baby Car Seat",
+          "category": "Safety",
+          "description": "Convertible car seat for babies and toddlers.",
+          "price": 6499,
+          "image_url": "https://i.pinimg.com/736x/21/94/c6/2194c68d67d46bc1356474acd262c1c3.jpg",
+          "quantity": 3
+        },
+        {
+          "id": "1",
+          "name": "Baby Bottle Set",
+          "category": "Feeding",
+          "description": "Set of 4 BPA-free baby bottles.",
+          "price": 699,
+          "image_url": "https://media.very.co.uk/i/very/UJPQP_SQ2_0000000047_GREEN_SLf?$pdp_300x400_x2$&fmt=jpg",
+          "quantity": 1
+        }
+      ],
       "order": [
         {
           "cartitems": [
@@ -89,8 +186,63 @@
             }
           ],
           "totalAmount": 1596
+        },
+        {
+          "cartitems": [
+            {
+              "id": "4",
+              "name": "Baby Car Seat",
+              "category": "Safety",
+              "description": "Convertible car seat for babies and toddlers.",
+              "price": 6499,
+              "image_url": "https://i.pinimg.com/736x/21/94/c6/2194c68d67d46bc1356474acd262c1c3.jpg",
+              "quantity": 1
+            }
+          ],
+          "totalAmount": 6499
+        },
+        {
+          "cartitems": [
+            {
+              "id": "4",
+              "name": "Baby Car Seat",
+              "category": "Safety",
+              "description": "Convertible car seat for babies and toddlers.",
+              "price": 6499,
+              "image_url": "https://i.pinimg.com/736x/21/94/c6/2194c68d67d46bc1356474acd262c1c3.jpg",
+              "quantity": 3
+            }
+          ],
+          "totalAmount": 19497
         }
       ]
+    },
+    {
+      "id": "c161",
+      "username": "fasnas",
+      "email": "f@gamil.com",
+      "password": "fasnas",
+      "cart": [
+        {
+          "id": "2",
+          "name": "Baby Bib Set",
+          "category": "Clothing",
+          "description": "Set of 5 baby bibs made of soft fabric.",
+          "price": 399,
+          "image_url": "https://media-uk.landmarkshops.in/cdn-cgi/image/h=1125,w=1125,q=85,fit=cover/lifestyle/1000011659588-Mult-Multicolour-1000011659588_02-2100.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "5",
+          "name": "Baby Swaddle Blanket",
+          "category": "Clothing",
+          "description": "Soft cotton swaddle blanket for newborns.",
+          "price": 499,
+          "image_url": "https://crane-baby.com/wp-content/uploads/2024/08/BC-100SWS-2_1_HERO.jpg",
+          "quantity": 1
+        }
+      ],
+      "order": []
     }
   ],
   "products": [

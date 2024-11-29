@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { FaArrowLeft } from 'react-icons/fa';  // Import the backward arrow icon
+import { Link } from 'react-router-dom';  // Use Link for navigation
 
 function Orders() {
   const id = localStorage.getItem('id');
@@ -16,7 +18,16 @@ function Orders() {
 
   return (
     <div className="container mt-5">
-      <h2>Your Orders</h2>
+      {/* Container for Backward Icon and Heading */}
+      <div className="d-flex align-items-center mb-4">
+        {/* Back Arrow Icon */}
+        <Link to="/" className="text-decoration-none text-dark me-3">
+          <FaArrowLeft size={30} />
+        </Link>
+        {/* Heading */}
+        <h2 className="mb-0">Your Orders</h2>
+      </div>
+
       <div className="row">
         {/* Loop through the orders */}
         {items.map((order, index) => (

@@ -11,7 +11,7 @@ const ProductsCard = ({ product }) => {
 
   return (
     <div className="col mb-4">
-      <div className="card h-100 shadow-sm border-light rounded">
+      <div className="card cardsize shadow-sm border-light rounded">
         {/* Wrap the entire card in Link for navigation */}
         <Link to={`/product/${product.id}`} className="text-decoration-none">
           {/* Product Image */}

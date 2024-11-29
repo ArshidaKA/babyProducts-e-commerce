@@ -1,55 +1,57 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // Using Link instead of NavLink
-import { FaShoppingCart, FaSignInAlt, FaSignOutAlt, FaSearch } from "react-icons/fa"; // Importing necessary icons
+import { Link } from "react-router-dom"; 
+import { FaShoppingCart, FaSignInAlt, FaSignOutAlt, FaSearch } from "react-icons/fa";
 import './Navbar.css';
-import axios from "axios"; // Import axios to handle the API request
+import axios from "axios";
 
 const NavbarComponent = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [searchQuery, setSearchQuery] = useState(""); // State to manage search input
-  const [searchResults, setSearchResults] = useState([]); // State to store search results
+  const [searchQuery, setSearchQuery] = useState(""); 
+  const [searchResults, setSearchResults] = useState([]); 
+  const [allProducts, setAllProducts] = useState([]); 
 
-  // Check if the user is logged in (on component mount)
+  
   useEffect(() => {
     const user = localStorage.getItem('id');
     if (user) {
-      setIsLoggedIn(true); // User is logged in
+      setIsLoggedIn(true); 
     }
   }, []);
 
-  // Handle logout
-  const handleLogout = () => {
-    localStorage.clear('id'); // Remove user from localStorage
-    localStorage.clear('user'); // Remove user from localStorage
-    setIsLoggedIn(false); // Update the state to reflect the user is logged out
-  };
-
-  // Handle search input change
-  const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value); // Update search query state
-  };
-
-  // Debounced search function to limit API calls
+  
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      if (searchQuery.trim() === "") {
-        setSearchResults([]); // Clear results if search is empty
-        return;
-      }
+    axios.get("http://localhost:4000/products")
+      .then((response) => {
+        setAllProducts(response.data); 
+      })
+      .catch((error) => {
+        console.log("Error fetching products:", error);
+      });
+  }, []);
 
-      // Fetch matching products from backend
-      axios.get(`http://localhost:4000/products?q=${searchQuery}`)
-        .then((response) => {
-          setSearchResults(response.data); // Update the state with the search results
-        })
-        .catch((error) => {
-          console.log("Error searching products:", error);
-        });
-    }, 500); // Delay API call by 500ms
+  
+  const handleSearchChange = (e) => {
+    const query = e.target.value;
+    setSearchQuery(query); 
 
-    // Clean up timeout on unmount or search query change
-    return () => clearTimeout(timeoutId);
-  }, [searchQuery]); // Trigger the search whenever searchQuery changes
+    if (query.trim() === "") {
+      setSearchResults([]); 
+      return;
+    }
+
+    
+    const filteredProducts = allProducts.filter((product) =>
+      product.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setSearchResults(filteredProducts); 
+  };
+
+  
+  const handleLogout = () => {
+    localStorage.clear('id'); 
+    localStorage.clear('user'); 
+    setIsLoggedIn(false);
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
@@ -164,19 +166,55 @@ const NavbarComponent = () => {
       </div>
 
       {/* Display search results in a dropdown */}
-      {searchResults.length > 0 && (
-        <div className="dropdown-menu show" style={{ position: 'absolute', top: '60px', left: '20px', width: 'auto' }}>
+      {searchResults.length > 0 ? (
+        <div
+          className="dropdown-menu show"
+          style={{
+            position: "absolute",
+            top: "60px",
+            left: "20px",
+            width: "auto",
+            zIndex: 9999,
+            backgroundColor: "#fff",
+            borderRadius: "4px",
+            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"
+          }}
+        >
           {searchResults.map((product) => (
-            <Link key={product.id} className="dropdown-item d-flex align-items-center" to={`/product/${product.id}`}>
-              <img 
-                src={product.image_url} 
-                alt={product.name} 
-                style={{ width: "30px", height: "30px", marginRight: "10px" }} 
+            <Link
+              key={product.id}
+              className="dropdown-item d-flex align-items-center"
+              to={`/product/${product.id}`}
+            >
+              <img
+                src={product.image_url}
+                alt={product.name}
+                style={{ width: "30px", height: "30px", marginRight: "10px" }}
               />
               {product.name}
             </Link>
           ))}
         </div>
+      ) : (
+        searchQuery.trim() !== "" && (
+          <div
+            className="dropdown-menu show"
+            style={{
+              position: "absolute",
+              top: "60px",
+              left: "20px",
+              width: "auto",
+              zIndex: 9999,
+              backgroundColor: "#fff",
+              borderRadius: "4px",
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"
+            }}
+          >
+            <div className="dropdown-item text-center">
+              No products found for "{searchQuery}"
+            </div>
+          </div>
+        )
       )}
     </nav>
   );

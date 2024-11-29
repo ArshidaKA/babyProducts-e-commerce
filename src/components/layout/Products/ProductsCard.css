@@ -3,6 +3,7 @@
 /* Card container style */
 .main-card {
   margin-bottom: 20px;
+  
 }
 
 /* Customize the card image */
@@ -75,4 +76,7 @@
   .card-footer {
     font-size: 0.9rem;
   }
+}
+.cardsize{
+  width:280px;
 }
