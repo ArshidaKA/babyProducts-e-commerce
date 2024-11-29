@@ -1,0 +1,29 @@
+/* Product Details Page Styling */
+.product-details {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .product-details-image {
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .product-details h2 {
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+  
+  .product-details p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+  
+  .product-details h3 {
+    color: green;
+  }
+  
+  .product-details button {
+    margin-top: 20px;
+  }
+  

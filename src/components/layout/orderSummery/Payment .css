@@ -1,0 +1,29 @@
+.payment-option {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.payment-logo {
+  width: 50px;
+  height: auto;
+}
+
+.card {
+  border-radius: 8px;
+}
+
+.card h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: bold;
+}

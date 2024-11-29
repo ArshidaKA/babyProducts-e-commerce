@@ -1,0 +1,76 @@
+/* Custom Styles for Navbar */
+.navbar{
+  background-color: #d695a5; 
+  border-radius: 20px;/* Dark Blue background */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Larger font size for brand */
+}
+
+.nav-link {
+  font-size: 1.1rem; /* Slightly larger font for links */
+  
+}
+
+.nav-link:hover {
+  color:white !important; 
+  background-color: rgb(248, 167, 179);/* Orange hover effect */
+  border-radius: 20px;
+}
+
+.btn {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #ecf0f1; /* Light color for the toggler icon */
+}
+
+.navbar-nav .nav-item .nav-link {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.name{
+  margin-left: -60px;
+}
+/* Style the dropdown menu */
+.navbar .dropdown-menu {
+  background-color: white; /* Dark background for the dropdown */
+  border-radius: 5px; /* Rounded corners */
+  padding: 0.5rem 0; /* Add padding to the dropdown */
+  border-color: #d695a5;
+}
+
+/* Style for each dropdown item */
+.navbar .dropdown-item {
+  color: #eb91bb; /* White text color */
+  padding: 10px 20px; /* Add padding */
+  text-decoration: none; /* Remove underline */
+  border-color: #d695a5;
+  font-weight: bold;
+}
+
+/* Hover effect for dropdown items */
+.navbar .dropdown-item:hover {
+  background-color:#d695a5; /* Darker background on hover */
+  color: #f8f9fa; /* Light text color on hover */
+  border-radius: 5px; /* Round the corners on hover */
+}
+
+/* Style for the dropdown toggle link */
+.navbar .nav-link.dropdown-toggle {
+  color: #fff; /* White text color for the toggle */
+  text-decoration: none; /* Remove underline from the toggle */
+}
+
+.navbar .nav-link.dropdown-toggle:hover {
+  color: #f8f9fa; /* Slightly lighter color on hover for the toggle */
+}
+.name{
+  margin-left: -20;
+}
+.colour{
+  color: white;
+}

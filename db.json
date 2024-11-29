@@ -1,0 +1,247 @@
+{
+  "users": [
+    {
+      "id": "0eb1",
+      "email": "arshidaakbar39@gmail.com",
+      "password": "safashifa",
+      "cart": [
+        {
+          "id": "3",
+          "name": "Baby High Chair",
+          "category": "Feeding",
+          "description": "Adjustable high chair with a detachable tray.",
+          "price": 2499,
+          "image_url": "https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:490,w:490)/data/mothercare/18-nov-2022/492863026_1.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "2",
+          "name": "Baby Bib Set",
+          "category": "Clothing",
+          "description": "Set of 5 baby bibs made of soft fabric.",
+          "price": 399,
+          "image_url": "https://media-uk.landmarkshops.in/cdn-cgi/image/h=1125,w=1125,q=85,fit=cover/lifestyle/1000011659588-Mult-Multicolour-1000011659588_02-2100.jpg",
+          "quantity": 1
+        }
+      ],
+      "order": [
+        {
+          "cartitems": [
+            {
+              "id": "20",
+              "name": "Baby Play Gym",
+              "category": "Toys",
+              "description": "Interactive play gym with hanging toys and mirrors.",
+              "price": 2199,
+              "image_url": "https://www.consobaby.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/w/w/ww1_1/Confetti-Party-Play-Mat-Mothercare-31.png",
+              "quantity": 1
+            }
+          ],
+          "totalAmount": 2199
+        },
+        {
+          "cartitems": [
+            {
+              "id": "8",
+              "name": "Baby Walker",
+              "category": "Toys",
+              "description": "Colorful baby walker with music and lights.",
+              "price": 1999,
+              "image_url": "https://m.media-amazon.com/images/I/61GbrdHpq-L.jpg",
+              "quantity": 1
+            }
+          ],
+          "totalAmount": 1999
+        },
+        {
+          "cartitems": [
+            {
+              "id": "17",
+              "name": "Baby Soft Play Tunnel",
+              "category": "Toys",
+              "description": "Colorful play tunnel for crawling and playing.",
+              "price": 1299,
+              "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR0iCo7-qR4DrdBgb-IQfqMq4AhSYDBcv0eh4ZD5y2L_tp749SIgdNB28cbZiYyFvGwMyb6_sJ8ju8XRYCIfhyIDZ_bbPKRB3KarklOGPzoSYKlZF5Tyt1k&usqp=CAE",
+              "quantity": 1
+            }
+          ],
+          "totalAmount": 1299
+        }
+      ]
+    },
+    {
+      "id": "61eb",
+      "username": "safa",
+      "email": "safa67@gmail.com",
+      "password": "safashifa"
+    },
+    {
+      "id": "f2d0",
+      "username": "abi",
+      "email": "safa67@gmail.com",
+      "password": "abidha"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Baby Bottle Set",
+      "category": "Feeding",
+      "description": "Set of 4 BPA-free baby bottles.",
+      "price": 699,
+      "image_url": "https://media.very.co.uk/i/very/UJPQP_SQ2_0000000047_GREEN_SLf?$pdp_300x400_x2$&fmt=jpg"
+    },
+    {
+      "id": "2",
+      "name": "Baby Bib Set",
+      "category": "Clothing",
+      "description": "Set of 5 baby bibs made of soft fabric.",
+      "price": 399,
+      "image_url": "https://media-uk.landmarkshops.in/cdn-cgi/image/h=1125,w=1125,q=85,fit=cover/lifestyle/1000011659588-Mult-Multicolour-1000011659588_02-2100.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Baby High Chair",
+      "category": "Feeding",
+      "description": "Adjustable high chair with a detachable tray.",
+      "price": 2499,
+      "image_url": "https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:490,w:490)/data/mothercare/18-nov-2022/492863026_1.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Baby Car Seat",
+      "category": "Safety",
+      "description": "Convertible car seat for babies and toddlers.",
+      "price": 6499,
+      "image_url": "https://i.pinimg.com/736x/21/94/c6/2194c68d67d46bc1356474acd262c1c3.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Baby Swaddle Blanket",
+      "category": "Clothing",
+      "description": "Soft cotton swaddle blanket for newborns.",
+      "price": 499,
+      "image_url": "https://crane-baby.com/wp-content/uploads/2024/08/BC-100SWS-2_1_HERO.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Baby Rocking Horse",
+      "category": "Toys",
+      "description": "Wooden rocking horse for baby’s entertainment.",
+      "price": 2499,
+      "image_url": "https://i5.walmartimages.com/seo/FUNLIO-Rocking-Horse-Pink_f4f3d74b-436b-4aac-bed4-aad928de510d.863c134cf04f1a13b41a43fb18df691c.jpeg?odnHeight=208&odnWidth=208&odnBg=FFFFFF"
+    },
+    {
+      "id": "7",
+      "name": "Baby Teething Ring",
+      "category": "Toys",
+      "description": "Silicone teething ring for soothing gums.",
+      "price": 299,
+      "image_url": "https://louloulollipop.ca/cdn/shop/products/Wild_Teething_Ring_Set-_Pastel.jpg?v=1659117773"
+    },
+    {
+      "id": "8",
+      "name": "Baby Walker",
+      "category": "Toys",
+      "description": "Colorful baby walker with music and lights.",
+      "price": 1999,
+      "image_url": "https://m.media-amazon.com/images/I/61GbrdHpq-L.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Baby Shoes",
+      "category": "Clothing",
+      "description": "Soft sole shoes for babies learning to walk.",
+      "price": 799,
+      "image_url": "https://miarcus.com/cdn/shop/files/bloom-coney-pu-leather-shoes-8904351982003-404490.webp"
+    },
+    {
+      "id": "10",
+      "name": "Baby Play Mat",
+      "category": "Toys",
+      "description": "Colorful and soft play mat for tummy time.",
+      "price": 1599,
+      "image_url": "https://www.consobaby.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/w/w/ww1_1/Confetti-Party-Play-Mat-Mothercare-31.png"
+    },
+    {
+      "id": "11",
+      "name": "Baby Carrier",
+      "category": "Safety",
+      "description": "Ergonomic baby carrier for hands-free carrying.",
+      "price": 2499,
+      "image_url": "https://i5.walmartimages.com/seo/AGUDAN-Baby-Carrier-with-Hip-Seat-Versatile-9-in-1-Unisex-Infant-Carrier-for-All-Seasons_977beb8e-10d6-4224-8d15-ec500313ac02.c4643428185395d3cf95de6114092897.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+    },
+    {
+      "id": "12",
+      "name": "Baby Nasal Aspirator",
+      "category": "Safety",
+      "description": "Electric nasal aspirator for babies with gentle suction.",
+      "price": 1299,
+      "image_url": "https://1ststep.com/cdn/shop/products/6Z9A0247_2048x.jpg?v=1605511083"
+    },
+    {
+      "id": "13",
+      "name": "Baby Bottle Warmer",
+      "category": "Feeding",
+      "description": "Portable bottle warmer for quick and easy feedings.",
+      "price": 1799,
+      "image_url": "https://joolbaby.com/cdn/shop/products/MAIN_WhiteBackground_6796c508-5b0a-4760-946e-80ce8ebf8088.jpg?v=1674679225"
+    },
+    {
+      "id": "14",
+      "name": "Baby Blanket",
+      "category": "Clothing",
+      "description": "Soft fleece blanket for keeping babies warm.",
+      "price": 699,
+      "image_url": "https://m.media-amazon.com/images/I/61X3l3LtmmS._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "15",
+      "name": "Baby Bathrobe",
+      "category": "Clothing",
+      "description": "Cotton bathrobe for baby after bath time.",
+      "price": 899,
+      "image_url": "https://assets.biglots.com/is/image/biglots/810444493"
+    },
+    {
+      "id": "16",
+      "name": "Baby Door Safety Lock",
+      "category": "Safety",
+      "description": "Safety locks for doors to keep babies out of dangerous areas.",
+      "price": 499,
+      "image_url": "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/13/0649791/1.jpg?1642"
+    },
+    {
+      "id": "17",
+      "name": "Baby Soft Play Tunnel",
+      "category": "Toys",
+      "description": "Colorful play tunnel for crawling and playing.",
+      "price": 1299,
+      "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR0iCo7-qR4DrdBgb-IQfqMq4AhSYDBcv0eh4ZD5y2L_tp749SIgdNB28cbZiYyFvGwMyb6_sJ8ju8XRYCIfhyIDZ_bbPKRB3KarklOGPzoSYKlZF5Tyt1k&usqp=CAE"
+    },
+    {
+      "id": "18",
+      "name": "Baby Spoon Set",
+      "category": "Feeding",
+      "description": "Set of baby-friendly spoons for feeding.",
+      "price": 199,
+      "image_url": "https://rforrabbit.com/cdn/shop/products/safe_feed_flexi_spoon_set_yellow_grey_1_65e387db-d908-4369-ac95-a9bc10163b80.jpg?v=1702971056"
+    },
+    {
+      "id": "19",
+      "name": "Baby Car Mirror",
+      "category": "Safety",
+      "description": "Adjustable mirror for safe baby rearview in the car.",
+      "price": 899,
+      "image_url": "https://i5.walmartimages.com/seo/Anime-Hello-Kittys-Car-Rearview-Mirror-Cover-Kawaii-Sanrios-Ear-View-Mirror-Protective-Case-Plushie-Car-Interior-Decor-Accessory_32d13603-45a8-4ada-9a2a-9d3dfd033512.1b076e91d6e041e417ab8e557fdd1c63.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+    },
+    {
+      "id": "20",
+      "name": "Baby Play Gym",
+      "category": "Toys",
+      "description": "Interactive play gym with hanging toys and mirrors.",
+      "price": 2199,
+      "image_url": "https://www.consobaby.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/w/w/ww1_1/Confetti-Party-Play-Mat-Mothercare-31.png"
+    }
+  ]
+}
