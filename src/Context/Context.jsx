@@ -38,6 +38,7 @@ function Context({ children }) {
 
   // Function to add item to cart
   const Addtocart = async (product) => {
+    
     const existcart = cart.find((item) => item.id === product.id);
     if (existcart) return; // Prevent adding duplicate products to the cart
 
@@ -61,7 +62,7 @@ function Context({ children }) {
   // Function to remove an item from cart
   const RemoveCart = async (cartId) => {
     try {
-      const updatedCart = cart.filter((item) => item.id !== cartId); // Filter out item by ID
+      const updatedCart = cart?.filter((item) => item.id !== cartId); // Filter out item by ID
 
       // Send PATCH request to update cart on the server
       await axios.patch(`http://localhost:4000/users/${id}`, {
@@ -83,7 +84,7 @@ function Context({ children }) {
     if (num === -1 && product.quantity === 1) return; // Don't decrease below 1
 
     // Update the cart locally (optimistic update)
-    const newCart = cart.map((item) =>
+    const newCart = cart?.map((item) =>
       item.id === product.id ? { ...item, quantity: item.quantity + num } : item
     );
 
@@ -106,7 +107,7 @@ function Context({ children }) {
       console.log("Error updating quantity:", error);
     }
   };
-  const totalAmount = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const totalAmount = cart?.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
     <userContext.Provider

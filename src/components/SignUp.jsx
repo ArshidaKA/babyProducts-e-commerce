@@ -25,6 +25,8 @@ function SignUP() {
         username: values.username,
         email: values.email,
         password: values.password,
+        cart:[],
+        order:[]
       })
       .then((res) => {
         console.log(res.data);
@@ -47,7 +49,8 @@ function SignUP() {
             initialValues={{
               username: "",
               email: "",
-              password: "",
+              password: ""
+             
             }}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}

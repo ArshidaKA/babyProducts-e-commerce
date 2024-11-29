@@ -6,7 +6,7 @@ import { userContext } from "../../../Context/Context";
 const ProductDetails = () => {
   const { productId } = useParams(); // Get product ID from the URL
   const [product, setProduct] = useState(null);
-  const { Addtocart, cart } = useContext(userContext); // Get cart and Addtocart from context
+  const { Addtocart, cart=[] } = useContext(userContext); // Get cart and Addtocart from context
 
   // Check if the product is in the cart
   const isInCart = cart.some((item) => item.id === productId);

@@ -5,7 +5,7 @@ import { FaArrowLeft } from 'react-icons/fa'; // Import back arrow icon
 import './Cart .css';
 
 function Cart() {
-  const { cart, RemoveCart, updatedquantity } = useContext(userContext);
+  const { cart=[], RemoveCart, updatedquantity } = useContext(userContext);
   const navigate = useNavigate(); // Initialize the navigate function
 
   // Calculate the total price of the items in the cart

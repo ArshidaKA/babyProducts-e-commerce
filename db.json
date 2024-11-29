@@ -70,16 +70,27 @@
       ]
     },
     {
-      "id": "61eb",
-      "username": "safa",
-      "email": "safa67@gmail.com",
-      "password": "safashifa"
-    },
-    {
-      "id": "f2d0",
-      "username": "abi",
-      "email": "safa67@gmail.com",
-      "password": "abidha"
+      "id": "2025",
+      "username": "salih",
+      "email": "salih@gmail.com",
+      "password": "12345678",
+      "cart": [],
+      "order": [
+        {
+          "cartitems": [
+            {
+              "id": "2",
+              "name": "Baby Bib Set",
+              "category": "Clothing",
+              "description": "Set of 5 baby bibs made of soft fabric.",
+              "price": 399,
+              "image_url": "https://media-uk.landmarkshops.in/cdn-cgi/image/h=1125,w=1125,q=85,fit=cover/lifestyle/1000011659588-Mult-Multicolour-1000011659588_02-2100.jpg",
+              "quantity": 4
+            }
+          ],
+          "totalAmount": 1596
+        }
+      ]
     }
   ],
   "products": [

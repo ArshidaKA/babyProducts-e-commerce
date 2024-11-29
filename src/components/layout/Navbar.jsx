@@ -11,7 +11,7 @@ const NavbarComponent = () => {
 
   // Check if the user is logged in (on component mount)
   useEffect(() => {
-    const user = localStorage.getItem('user');
+    const user = localStorage.getItem('id');
     if (user) {
       setIsLoggedIn(true); // User is logged in
     }
@@ -19,7 +19,8 @@ const NavbarComponent = () => {
 
   // Handle logout
   const handleLogout = () => {
-    localStorage.removeItem('user'); // Remove user from localStorage
+    localStorage.clear('id'); // Remove user from localStorage
+    localStorage.clear('user'); // Remove user from localStorage
     setIsLoggedIn(false); // Update the state to reflect the user is logged out
   };
 

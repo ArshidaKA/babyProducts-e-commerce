@@ -4,7 +4,7 @@ import { userContext } from "../../../Context/Context";
 import "./ProductsCard.css";
 
 const ProductsCard = ({ product }) => {
-  const { Addtocart, cart } = useContext(userContext); // Get cart from context
+  const { Addtocart, cart=[] } = useContext(userContext); // Get cart from context
 
   // Check if the product is in the cart
   const isInCart = cart.some((item) => item.id === product.id);

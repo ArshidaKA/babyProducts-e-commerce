@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom'; // For navigation after saving
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+
 
 const OrderDetails = () => {
   const navigate = useNavigate(); // Access the navigate function
@@ -30,26 +31,16 @@ const OrderDetails = () => {
 
   // Handle form submission
   const handleSave = (values) => {
-    // Save the order details to localStorage
+    // Save the order details to localStorage (or use context/state if preferred)
     localStorage.setItem('orderDetails', JSON.stringify(values));
 
     // Navigate to the order summary page after saving
     navigate('/order-summary');
   };
 
-  // Check if the user already has an address
-  useEffect(() => {
-    const storedAddress = localStorage.getItem('orderDetails');
-    
-    // If an address is already saved, skip the form and navigate to order summary
-    if (storedAddress) {
-      navigate('/order-summary');
-    }
-  }, [navigate]);
-
   return (
     <div className="container mt-5">
-      <h2 className="text-center mb-4">Add Delivery Address</h2>
+      <h2 className="text-center mb-4">Add delivery address</h2>
       
       {/* Formik Form */}
       <Formik
