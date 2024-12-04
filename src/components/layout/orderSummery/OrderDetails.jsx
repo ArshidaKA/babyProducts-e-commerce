@@ -1,13 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // For navigation after saving
+import { useNavigate } from 'react-router-dom'; 
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { MdArrowBack } from 'react-icons/md'; // Import backward arrow icon from react-icons
+import { MdArrowBack } from 'react-icons/md'; 
 
 const OrderDetails = () => {
-  const navigate = useNavigate(); // Access the navigate function
+  const navigate = useNavigate(); 
 
-  // Initial form values
+  
   const initialValues = {
     fullName: '',
     phoneNumber: '',
@@ -16,7 +16,7 @@ const OrderDetails = () => {
     pincode: '',
   };
 
-  // Form validation schema using Yup
+  
   const validationSchema = Yup.object({
     fullName: Yup.string().required('Full Name is required'),
     phoneNumber: Yup.string()
@@ -29,36 +29,35 @@ const OrderDetails = () => {
       .required('Pincode is required'),
   });
 
-  // Handle form submission
+
   const handleSave = (values) => {
-    // Save the order details to localStorage (or use context/state if preferred)
+    
     localStorage.setItem('orderDetails', JSON.stringify(values));
 
-    // Navigate to the order summary page after saving
+  
     navigate('/order-summary');
   };
 
   return (
     <div className="container mt-5">
-      {/* Backward Icon */}
+    
       <button 
         className="btn btn-link position-absolute top-0 start-0 ms-3 mt-3"
-        onClick={() => navigate(-1)} // Go back to the previous page
-        style={{ fontSize: '1.5rem', color: '#007bff', padding: '0.25rem 0.5rem' }} // Reduced padding for smaller button
+        onClick={() => navigate(-1)}
+        style={{ fontSize: '1.5rem', color: '#007bff', padding: '0.25rem 0.5rem' }} 
       >
         <MdArrowBack />
       </button>
 
       <h2 className="text-center mb-4">Add delivery address</h2>
       
-      {/* Formik Form */}
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSave}
       >
         <Form>
-          {/* Full Name Field */}
+          
           <div className="mb-3">
             <label htmlFor="fullName" className="form-label">Full Name</label>
             <Field
@@ -70,7 +69,7 @@ const OrderDetails = () => {
             <ErrorMessage name="fullName" component="div" className="text-danger" />
           </div>
 
-          {/* Phone Number Field */}
+    
           <div className="mb-3">
             <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
             <Field
@@ -82,7 +81,7 @@ const OrderDetails = () => {
             <ErrorMessage name="phoneNumber" component="div" className="text-danger" />
           </div>
 
-          {/* Address Field */}
+        
           <div className="mb-3">
             <label htmlFor="address" className="form-label">Address</label>
             <Field
@@ -95,7 +94,7 @@ const OrderDetails = () => {
             <ErrorMessage name="address" component="div" className="text-danger" />
           </div>
 
-          {/* State Field */}
+      
           <div className="mb-3">
             <label htmlFor="state" className="form-label">State</label>
             <Field
@@ -107,7 +106,7 @@ const OrderDetails = () => {
             <ErrorMessage name="state" component="div" className="text-danger" />
           </div>
 
-          {/* Pincode Field */}
+        
           <div className="mb-3">
             <label htmlFor="pincode" className="form-label">Pincode</label>
             <Field
@@ -119,7 +118,7 @@ const OrderDetails = () => {
             <ErrorMessage name="pincode" component="div" className="text-danger" />
           </div>
 
-          {/* Save Button */}
+        
           <button  type="submit" className="btn btn-success  w-20">Save Address</button>
         </Form>
       </Formik>

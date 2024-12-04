@@ -1,22 +1,22 @@
-/* Custom Styles for Navbar */
+
 .navbar{
-  background-color: #2e1c21; 
+  background-color: #685656; 
   
   color: #fcf5f5;
 }
 
 .navbar-brand {
-  font-size: 1.5rem; /* Larger font size for brand */
+  font-size: 1.5rem; 
 }
 
 .nav-link {
-  font-size: 1.1rem; /* Slightly larger font for links */
+  font-size: 1.1rem; 
   
 }
 
 .nav-link:hover {
   color:white !important; 
-  background-color: rgb(119, 111, 113);/* Orange hover effect */
+  background-color: rgb(119, 111, 113);
   border-radius: 20px;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .navbar-toggler-icon {
-  background-color: #080808; /* Light color for the toggler icon */
+  background-color: #080808; 
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -36,38 +36,36 @@
 .name{
   margin-left: -60px;
 }
-/* Style the dropdown menu */
+
 .navbar .dropdown-menu {
-  background-color: #f8f5f6; /* Dark background for the dropdown */
-  border-radius: 5px; /* Rounded corners */
-  padding: 0.5rem 0; /* Add padding to the dropdown */
+  background-color: #f8f5f6; 
+  border-radius: 5px; 
+  padding: 0.5rem 0; 
   border-color: #131112;
 }
 
-/* Style for each dropdown item */
+
 .navbar .dropdown-item {
-  color:#111010; /* White text color */
-  padding: 10px 20px; /* Add padding */
-  text-decoration: none; /* Remove underline */
+  color:#111010; 
+  padding: 10px 20px; 
+  text-decoration: none; 
   
   font-weight: bold;
 }
 
-/* Hover effect for dropdown items */
+
 .navbar .dropdown-item:hover {
-  background-color:#ece2e5; /* Darker background on hover */
-   /* Light text color on hover */
-  border-radius: 5px; /* Round the corners on hover */
+  background-color:#ece2e5; 
+  border-radius: 5px; 
 }
 
-/* Style for the dropdown toggle link */
 .navbar .nav-link.dropdown-toggle {
-  color: #fff; /* White text color for the toggle */
-  text-decoration: none; /* Remove underline from the toggle */
+  color: #fff;
+  text-decoration: none; 
 }
 
 .navbar .nav-link.dropdown-toggle:hover {
-  color: #f8f9fa; /* Slightly lighter color on hover for the toggle */
+  color: #f8f9fa; 
 }
 .name{
   margin-left: -20;

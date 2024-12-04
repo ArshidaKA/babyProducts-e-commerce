@@ -1,7 +1,7 @@
 import React,{useContext} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
-import './Payment .css'; // For custom styling if needed
+import './Payment .css'; // 
 import axios from 'axios';
 import { userContext } from '../../../Context/Context';
 
@@ -11,7 +11,7 @@ const Payment = () => {
   const id=localStorage.getItem('id')
 
   const handleBack = () => {
-    navigate(-1); // Navigate back to the previous page
+    navigate(-1); 
   };
   function submitt(){
     const newOrders={
@@ -30,7 +30,7 @@ const Payment = () => {
 
   return (
     <div className="container mt-5">
-      {/* Back Button */}
+    
       <div className="d-flex justify-content-start mb-4">
         <button className="btn btn-secondary btn-sm" onClick={handleBack}>
           <FaArrowLeft /> 
@@ -39,7 +39,7 @@ const Payment = () => {
 
       <h2 className="text-center mb-4">Payment Methods</h2>
 
-      {/* Payment Options */}
+
       <div className="row">
         <div className="col-md-4">
           <div className="card p-3">
@@ -94,7 +94,7 @@ const Payment = () => {
         </div>
       </div>
 
-      {/* Cash on Delivery Option */}
+
       <div className="mt-5">
         <div className="card p-3">
           <h5>Cash on Delivery</h5>

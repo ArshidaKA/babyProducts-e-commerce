@@ -1,17 +1,17 @@
-/* Custom Footer Styles */
+
 .social-icon {
-  font-size: 30px; /* Makes the icons larger */
-  color: #ebe5e5; /* Set color to dark */
+  font-size: 30px; 
+  color: #ebe5e5; 
   transition: color 0.3s ease-in-out;
 }
 
 .social-icon:hover {
-  color: #007bff; /* Change color on hover */
-  text-decoration: none; /* Remove underline on hover */
+  color: #007bff; 
+  text-decoration: none; 
 }
 
 .btn-success {
-  background-color: #28a745; /* Green color for the button */
+  background-color: #28a745; 
   border-color: #28a745;
 }
 

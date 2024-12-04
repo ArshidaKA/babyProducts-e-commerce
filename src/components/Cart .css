@@ -1,25 +1,23 @@
-/* Styling for the sticky Total Price section */
+
 .total-price-section {
-  position: -webkit-sticky; /* For Safari */
+  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   z-index: 1000;
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: #f8f9fa; 
   padding: 15px 25px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   margin-top: 20px;
-  transition: transform 0.3s ease; /* Smooth transition for sticky element */
+  transition: transform 0.3s ease; 
 }
 
-/* Styling for Total Price text */
 .total-price {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #28a745; /* Green color for emphasis */
+  color: #28a745; 
 }
 
-/* Styling for Order Now button */
 .order-btn {
   font-size: 1.2rem;
   font-weight: bold;
@@ -31,10 +29,10 @@
 }
 
 .order-btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3; 
 }
 
-/* Optional: Hover effect for the "Order Now" button */
+
 .order-btn:focus,
 .order-btn:hover {
   box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5);

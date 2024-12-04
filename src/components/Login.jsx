@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import React, { useEffect, useState } from "react";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);  // State to track login status
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const initialValues = {
-    email: '',
-    password: ''
+    email: "",
+    password: "",
   };
 
-  // Check if user is already logged in on component mount
   useEffect(() => {
-    const user = localStorage.getItem('user');
+    const user = localStorage.getItem("user");
     if (user) {
       setIsLoggedIn(true);
     }
@@ -24,57 +23,70 @@ const Login = () => {
 
   const validationSchema = Yup.object({
     email: Yup.string()
-      .email('Invalid email format')
-      .required('Email is required'),
-    password: Yup.string()
-      .required('Password is required')
+      .email("Invalid email format")
+      .required("Email is required"),
+    password: Yup.string().required("Password is required"),
   });
 
   const onSubmit = async (values, { setSubmitting, setStatus }) => {
     try {
-      // Send GET request to JSON Server for login
-      const response = await axios.get('http://localhost:4000/users', {
+      // Fetch user data from the server based on email and password
+      const response = await axios.get("http://localhost:4000/users", {
         params: {
           email: values.email,
-          password: values.password
-        }
+          password: values.password,
+        },
       });
 
-      // If a user is found, proceed with login
       if (response.data.length > 0) {
-        console.log('Login Success:', response.data[0].id);
-        localStorage.setItem('user', JSON.stringify(response.data[0]));
-        localStorage.setItem('id', response.data[0].id);
-        setIsLoggedIn(true);  // Set login state to true
-        navigate('/'); // Redirect to the home page
+        const user = response.data[0]; // Get the first matched user
+        if (user.blocked) {
+          // Check if the user is blocked
+          setStatus({
+            message: "Your account has been blocked. Please contact support.",
+          });
+        } else {
+          // User is not blocked, proceed with login
+          console.log("Login Success:", user.id);
+          localStorage.setItem("user", JSON.stringify(user));
+          localStorage.setItem("id", user.id);
+          setIsLoggedIn(true);
+
+          // Navigate based on user role
+          if (user.role === "admin") {
+            navigate("/adminlayout");
+          } else {
+            navigate("/");
+          }
+        }
       } else {
-        setStatus({ message: 'Invalid credentials' });
+        setStatus({ message: "Invalid credentials" }); // No matching user found
       }
     } catch (error) {
-      console.error('Login Error:', error);
-      setStatus({ message: 'Error occurred. Please try again later.' });
+      console.error("Login Error:", error);
+      setStatus({ message: "Error occurred. Please try again later." });
     } finally {
       setSubmitting(false);
     }
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('user');  // Remove user data from localStorage
-    localStorage.removeItem('id');    // Remove user id from localStorage
-    setIsLoggedIn(false);  // Set login state to false
-    navigate('/login');    // Redirect to login page
+    localStorage.removeItem("user");
+    localStorage.removeItem("id");
+    setIsLoggedIn(false);
+    navigate("/login");
   };
 
   return (
     <div className="containers container mt-4">
       <div className="col-md-6 mx-auto">
         <div className="text-center mb-3">
-          <h2 style={{ color: '#b35ea0' }}>
-            Bab<span style={{ color: 'yellow' }}>Y</span>bliss
+          <h2 style={{ color: "#2e1c21", marginLeft: -50 }}>
+            Bab<span style={{ color: "yellow" }}>Y</span>bliss
           </h2>
         </div>
         <div className="box card shadow-lg p-4">
-          <h4 className="text-center mb-4" style={{ color: '#b35ea0' }}>
+          <h4 className="text-center mb-4" style={{ color: "#2e1c21" }}>
             Welcome Back!
           </h4>
           {isLoggedIn ? (
@@ -94,7 +106,6 @@ const Login = () => {
             >
               {({ isSubmitting, status }) => (
                 <Form>
-                  {/* Email Field */}
                   <div className="mb-3">
                     <label htmlFor="email" className="form-label">
                       Email
@@ -106,10 +117,13 @@ const Login = () => {
                       placeholder="Enter your email"
                       className="form-control"
                     />
-                    <ErrorMessage name="email" component="div" className="text-danger" />
+                    <ErrorMessage
+                      name="email"
+                      component="div"
+                      className="text-danger"
+                    />
                   </div>
 
-                  {/* Password Field */}
                   <div className="mb-3">
                     <label htmlFor="password" className="form-label">
                       Password
@@ -121,21 +135,23 @@ const Login = () => {
                       placeholder="Enter your password"
                       className="form-control"
                     />
-                    <ErrorMessage name="password" component="div" className="text-danger" />
+                    <ErrorMessage
+                      name="password"
+                      component="div"
+                      className="text-danger"
+                    />
                   </div>
 
-                  {/* Error Message */}
                   {status && status.message && (
                     <div className="alert alert-danger">{status.message}</div>
                   )}
 
-                  {/* Submit Button */}
                   <button
                     type="submit"
                     className="btn btn-primary w-100 mt-3 py-2"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? 'Logging In...' : 'Login'}
+                    {isSubmitting ? "Logging In..." : "Login"}
                   </button>
                 </Form>
               )}
@@ -145,11 +161,11 @@ const Login = () => {
           {!isLoggedIn && (
             <div className="text-center mt-3">
               <h6>
-                Don't have an account?{' '}
+                Don't have an account?{" "}
                 <button
                   className="btn btn-link"
-                  onClick={() => navigate('/signUP')}
-                  style={{ color: 'blue', textDecoration: 'underline' }}
+                  onClick={() => navigate("/signUP")}
+                  style={{ color: "blue", textDecoration: "underline" }}
                 >
                   Sign Up
                 </button>
@@ -159,12 +175,12 @@ const Login = () => {
         </div>
       </div>
       <h6 className="text-center mt-4 text-muted">
-        By continuing, I agree to the{' '}
-        <a href="#" style={{ color: 'blue' }}>
+        By continuing, I agree to the{" "}
+        <a href="#" style={{ color: "blue" }}>
           Terms of Use
-        </a>{' '}
-        and{' '}
-        <a href="#" style={{ color: 'blue' }}>
+        </a>{" "}
+        and{" "}
+        <a href="#" style={{ color: "blue" }}>
           Privacy Policy
         </a>
       </h6>

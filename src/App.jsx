@@ -14,10 +14,19 @@ import OrderDetails from "./components/layout/orderSummery/OrderDetails";
 import OrderSummary from "./components/layout/orderSummery/OrderSummery";
 import Payment from "./components/layout/orderSummery/Payment";
 import Orders from "./components/Orders";
+import AdminLayout from "./admin/AdminLayout";
+import Dashboard from "./admin/AdminLayout/Admindashboard/Dashboard";
+import OrdersList from "./admin/AdminLayout/Admindashboard/OrdersList";
+import UsersList from "./admin/AdminLayout/Admindashboard/UsersList";
+import BlockList from "./admin/AdminLayout/Admindashboard/BlockList";
+import ProductsList from "./admin/AdminLayout/Admindashboard/ProductsList";
+
+
 
 function App() {
   return (
     <>
+      
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -35,7 +44,22 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path='/product/:productId' element={<ProductDetails/>}/>
         <Route path='/orders' element={<Orders/>}/>
+        <Route path="/adminlayout" element={<AdminLayout/>}>
+
+
+        <Route index element={<Dashboard/>}/>
+        <Route path="order-list/:id" element={<OrdersList/>}/>
+        <Route path="users-list" element={<UsersList/>}/>
+        <Route path="block-list" element={<BlockList/>}/>
+        <Route path="product-list" element={<ProductsList/>}/>
+        
+        
+
+        
+        
+        </Route>
       </Routes>
+
     </>
   );
 }

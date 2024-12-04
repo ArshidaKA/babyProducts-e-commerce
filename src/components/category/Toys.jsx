@@ -17,7 +17,7 @@ const Toys = () => {
   }, []); 
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5" style={{background: "rgb(212, 218, 190)",borderRadius:30}}>
       <h1 className="text-center mb-5">Toys</h1>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {products.map((product) => (

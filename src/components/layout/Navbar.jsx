@@ -4,6 +4,9 @@ import { FaShoppingCart, FaSignInAlt, FaSignOutAlt, FaSearch } from "react-icons
 import './Navbar.css';
 import axios from "axios";
 
+
+
+
 const NavbarComponent = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [searchQuery, setSearchQuery] = useState(""); 
@@ -18,7 +21,6 @@ const NavbarComponent = () => {
     }
   }, []);
 
-  
   useEffect(() => {
     axios.get("http://localhost:4000/products")
       .then((response) => {
@@ -39,7 +41,6 @@ const NavbarComponent = () => {
       return;
     }
 
-    
     const filteredProducts = allProducts.filter((product) =>
       product.name.toLowerCase().includes(query.toLowerCase())
     );
@@ -54,14 +55,14 @@ const NavbarComponent = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
+    <nav className="navbar navbar-expand-lg  navbar-dark">
       <div className="container">
-        {/* App Name - Left side */}
+        
         <Link className="name navbar-brand text-decoration-none font-weight-bold" to="/">
           <h3>Bab<span style={{ color: "yellow" }}>Y</span>bliss</h3>
         </Link>
 
-        {/* Search Bar */}
+
         <div className="input-group mb-1" style={{ maxWidth: "400px", marginLeft: "20px" }}>
           <input
             type="text"
@@ -75,7 +76,7 @@ const NavbarComponent = () => {
           </button>
         </div>
 
-        {/* Navbar toggler for mobile responsiveness */}
+    
         <button
           className="navbar-toggler"
           type="button"
@@ -88,17 +89,17 @@ const NavbarComponent = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navbar links - Right side */}
+        
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            {/* Home Link */}
+    
             <li className="nav-item">
               <Link className="text-decoration-none nav-link text-light" to="/">
                 Home
               </Link>
             </li>
 
-            {/* Categories Link with Dropdown */}
+      
             <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle text-light"
@@ -134,19 +135,20 @@ const NavbarComponent = () => {
               </ul>
             </li>
 
-            {/* Shopping Cart Link with icon and text */}
+  
             <li className="nav-item">
               <Link className="text-decoration-none nav-link text-light" to="/cart">
                 <FaShoppingCart className="me-2" size={20} /> Cart
               </Link>
             </li>
+
             <li className="nav-item">
               <Link className="text-decoration-none nav-link text-light" to="/orders">
                 Orders
               </Link>
             </li>
 
-            {/* Conditional Login/Logout Link */}
+    
             <li className="nav-item">
               {isLoggedIn ? (
                 <button
@@ -164,8 +166,6 @@ const NavbarComponent = () => {
           </ul>
         </div>
       </div>
-
-      {/* Display search results in a dropdown */}
       {searchResults.length > 0 ? (
         <div
           className="dropdown-menu show"
